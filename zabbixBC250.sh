@@ -55,8 +55,10 @@ sed -i 's/zabbixipaddressvar/192.168.254.25/g' /etc/zabbix/zabbix_agentd.conf
 sed -i 's/hostnamevar/'"$HOSTNAME"'/g' /etc/zabbix/zabbix_agentd.conf
 
 #zabbix log file
-mkdir /var/log/zabbix/
-chown zabbix /var/log/zabbix/
+if ! [ -d /var/log/zabbix/ ]; then
+ mkdir /var/log/zabbix/
+ chown zabbix /var/log/zabbix/
+fi
 
 #add customminer to rc.local for auto startup
 sed -i -e '$i \/home/user/customminer.sh\n' /etc/rc.local
