@@ -66,3 +66,4 @@ sed -i -e '$i \/home/user/customminer.sh\n' /etc/rc.local
 #restart zabbix agent
 
 systemctl restart zabbix-agent
+shutdown -r now
