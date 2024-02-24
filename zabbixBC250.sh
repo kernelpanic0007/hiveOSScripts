@@ -34,7 +34,7 @@ apt -y install zabbix-agent
 wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/amd-oc.conf -O /hive-config/amd-oc.conf
 wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/zabbix_agentd.conf -O /etc/zabbix/zabbix_agentd.conf
 wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/customminer.sh -O /home/user/customminer.sh
-wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/gpuTemp.sh -O /home/user/gputemp.sh 
+#wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/gpuTemp.sh -O /home/user/gputemp.sh 
 wget https://raw.githubusercontent.com/kernelpanic0007/hiveOSScripts/main/rig.conf -O /hive-config/rig.conf
 #start zabbix
 systemctl start zabbix-agent 
@@ -47,8 +47,8 @@ chmod +x /home/user/gputemp.sh
 #replace dummy var with wallet
 
 sed -i 's/walletaddress/c50ca78fa5095615f64e6a310f9a33adada4e6e32f68ae12/g' /home/user/customminer.sh
-sed -i 's/nodeipaddressvar/192.168.254.21/g' /home/user/customminer.sh
-sed -i 's/nodeipport/3000/g' /home/user/customminer.sh
+sed -i 's/nodeipaddressvar/192.168.254.25/g' /home/user/customminer.sh
+sed -i 's/nodeipport/3001/g' /home/user/customminer.sh
 
 #replace zabbix HostName with systems
 sed -i 's/zabbixipaddressvar/192.168.254.25/g' /etc/zabbix/zabbix_agentd.conf
