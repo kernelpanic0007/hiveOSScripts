@@ -42,7 +42,7 @@ systemctl enable zabbix-agent
 
 #make scripts executable
 chmod +x /home/user/customminer.sh
-chmod +x /home/user/gputemp.sh
+#chmod +x /home/user/gputemp.sh
 
 #replace dummy var with wallet
 
