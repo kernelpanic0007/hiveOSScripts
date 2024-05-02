@@ -7,4 +7,4 @@ wget -nc https://bzminer.com/downloads/bzminer_v21.1.3b3_linux.tar.gz
 rm -r /home/user/bzminer_v21.1.3b3_linux/*
 tar xzvf bzminer_v21.1.3b3_linux.tar.gz
 /hive/sbin/amd-oc
-screen -dmS wart_miner bash -c  "while true; do /home/user/bzminer_v21.1.3b3_linux/bzminer -a warthog -r $worker -w walletaddress -p nodeipaddressvar --nc 1 --nvidia 0 --amd 1 --warthog_cpu_threads 12 --warthog_max_ram_gb 4 --warthog_cache_config 3 2>&1 | tee /var/log/bzminer_hiveos.log; done"
+screen -dmS wart_miner bash -c  "while true; do /home/user/bzminer_v21.1.3b3_linux/bzminer -a warthog -r $worker -w walletaddress -p nodeipaddressvar --nc 1 --nvidia 0 --amd 1 --warthog_cpu_threads 12 --warthog_max_ram_gb 4 --warthog_cache_config 0 2>&1 | tee /var/log/bzminer_hiveos.log; done"
